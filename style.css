@@ -1,5 +1,5 @@
 /* Basic Style */
-body {
+.page {
   background-color: #f8f8f8;
   color: #333;
   font-family: Lato, sans-serif;
@@ -10,7 +10,7 @@ body {
   display: block;
   text-align: right;
 }
-.header img {
+.header-img {
   width: 100%;
 }
 .header .link-more {
@@ -34,17 +34,17 @@ body {
 .task-row-wrapper {
   display: flex;
 }
-ul {
+.section {
   margin:0;
   padding: 0px;
 }
-li, h3 {
+.task-container, .section-header {
   list-style:none;
 }
-input,button{
+.input,.button{
   outline:none;
 }
-button {
+.button {
   background: none;
   border: 0px;
   color: #888;
@@ -53,12 +53,11 @@ button {
   font-family: Lato, sans-serif;
   cursor: pointer;
 }
-button:hover {
+.button:hover {
   color: #3a3A3a;
 }
 /* Heading */
-h3,
-label[for="input-new-task"] {
+.section-header {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -67,7 +66,7 @@ label[for="input-new-task"] {
   margin: 0;
   text-transform: uppercase;
 }
-input[type="text"] {
+.input-text {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -79,21 +78,21 @@ input[type="text"] {
   font-family: Lato, sans-serif;
   color: #888;
 }
-input[type="text"]:focus {
+.input-text:focus {
   color: #333;
 }
 
 /* New Task */
-label[for="input-new-task"] {
+.header-add-task {
   display: block;
   margin: 0 0 20px;
 }
-input#input-new-task {
+#input-new-task {
   width: 318px;
 }
 
 /* Task list */
-li {
+.task-container {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -102,47 +101,47 @@ li {
   justify-content: space-between;
   align-items: center;
 }
-li > * {
+.task-container > * {
   vertical-align: middle;
 }
 
-li > input[type="checkbox"] {
+.input-checkbox {
   margin: 0 10px;
 }
-li > label {
+.label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
-li >    input[type="text"] {
+.input-text {
   width: 226px
 }
-button.button-delete img {
+.button-img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
-button.button-delete img:hover {
+.button.button-delete .button-img:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
-ul#section-completed-tasks label {
+#section-completed-tasks .label {
   text-decoration: line-through
   color: #888;
 }
 
 /* Edit Task */
-ul li input[type="text"] {
+.section .input-text {
   display:none
 }
 
-ul li.task-container-edit input[type="text"] {
+.task-container-edit .input-text {
   display:inline-block;
   width:224px
 }
 
-ul li.task-container-edit label {
+.task-container-edit .label {
   display:none;
 }
