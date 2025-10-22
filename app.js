@@ -17,7 +17,7 @@ var completedTasksHolder=document.getElementById("section-completed-tasks");//co
 //New task list item
 var createNewTaskElement=function(taskString){
 
-    var listItem=document.createElement("li");
+    var listItem=document.createElement("div");
 
     //input (checkbox)
     var checkBox=document.createElement("input");//checkbx
@@ -177,23 +177,16 @@ var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
 
 //cycle over incompleteTaskHolder ul list items
 //for each list item
-for (var i=0; i<incompleteTaskHolder.children.length;i++){
-
-    //bind events to list items chldren(tasksCompleted)
-    bindTaskEvents(incompleteTaskHolder.children[i],taskCompleted);
-}
-
-
-
+var incompleteTasks = incompleteTaskHolder.querySelectorAll('.task-container');
+incompleteTasks.forEach((taskListItem) => {
+  bindTaskEvents(taskListItem, taskCompleted);
+});
 
 //cycle over completedTasksHolder ul list items
-for (var i=0; i<completedTasksHolder.children.length;i++){
-    //bind events to list items chldren(tasksIncompleted)
-    bindTaskEvents(completedTasksHolder.children[i],taskIncomplete);
-}
-
-
-
+var completedTasks = completedTasksHolder.querySelectorAll('.task-container');
+completedTasks.forEach((taskListItem) => {
+  bindTaskEvents(taskListItem, taskIncomplete);
+});
 
 // Issues with usability don't get seen until they are in front of a human tester.
 
