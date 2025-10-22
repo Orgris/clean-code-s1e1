@@ -6,21 +6,21 @@
     <link rel="stylesheet" href="style.css" media="screen" charset="utf-8">
   </head>
   <body class="page">
-    <div class="header">
+    <header class="header">
       <img class="header-img" src="./eisenhower-matrix.jpg">
       <a class="link-more" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
-    </div>
-    <div class="main">
-      <p id="section-add-task">
-        <label class="section-header header-add-task" for="input-new-task">Add Item</label>
+    </header>
+    <main class="main">
+      <section id="section-add-task">
+        <h2 class="section-header header-add-task" for="input-new-task">Add Item</h2>
         <div class="task-row-wrapper">
           <input id="input-new-task"class="input input-text input-task" type="text">
           <button class="button">Add</button>
         </div>
-      </p>
-      <h3 class="section-header">Todo</h3>
-      <ul id="section-todo" class="section">
-        <li class="task-container">
+      </section>
+      <section id="section-todo" class="section">
+        <h2 class="section-header">Todo</h2>
+        <div class="task-container">
           <input type="checkbox" class="input input-checkbox">
           <label class="label input-task">Pay Bills</label>
           <input type="text" class="input input-text input-task">
@@ -28,8 +28,8 @@
           <button class="button button-delete">
             <img class="button-img" src="./remove.svg">
           </button>
-        </li>
-        <li class="task-container task-container-edit">
+        </div>
+        <div class="task-container task-container-edit">
           <input type="checkbox" class="input input-checkbox">
           <label class="label input-task">Go Shopping</label>
           <input type="text" value="Go Shopping" class="input input-text input-task">
@@ -37,11 +37,11 @@
           <button class="button button-delete">
             <img class="button-img" src="./remove.svg">
           </button>
-        </li>
-      </ul>
-      <h3 class="section-header">Completed</h3>
-      <ul id="section-completed-tasks" class="section">
-        <li class="task-container">
+        </div>
+      </section>
+      <section id="section-completed-tasks" class="section">
+        <h2 class="section-header">Completed</h2>
+        <div class="task-container">
           <input type="checkbox" class="input input-checkbox" checked>
           <label class="label input-task">See the Doctor</label>
           <input type="text" class="input input-text input-task">
@@ -49,9 +49,9 @@
           <button class="button button-delete">
             <img class="button-img" src="./remove.svg">
           </button>
-        </li>
-      </ul>
-    </div>
+        </div>
+      </section>
+    </main>
     <script src="app.js"></script>
   </body>
 </html>
