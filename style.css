@@ -17,7 +17,7 @@
   font-family: fantasy, cursive;
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .header { 
     text-align: center;
   }
@@ -39,10 +39,12 @@
   margin: 0;
   padding: 0px;
 }
-.section__task-container, .section__header {
+.section__task-container,
+.section__header {
   list-style: none;
 }
-.section__input,.section__button{
+.section__input,
+.section__button {
   outline: none;
 }
 .section__button {
